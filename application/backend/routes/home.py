@@ -5,6 +5,11 @@ from application.backend.services.whatsapp import Whatsapp
 home_bp = Blueprint('home', __name__)
 
 
+@home_bp.route('/', methods=['GET'])
+def bienvenido():
+    return 'Hola mundo. desde Flask'
+
+
 @home_bp.route('/webhook', methods=['GET'])
 def verify_token():
     Whatsapp().verify_token()
