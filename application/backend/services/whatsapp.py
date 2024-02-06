@@ -30,8 +30,11 @@ class Whatsapp:
     @staticmethod
     def verify_token():
         try:
+            print('entre')
             token = request.args.get('hub.verify_token')
             challenge = request.args.get('hub.challenge')
+            print(token)
+            print(challenge)
             if token == settings.token and challenge is not None:
                 return challenge
             else:
