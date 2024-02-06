@@ -12,6 +12,7 @@ def verify_token():
 
 @home_bp.route('/webhook', methods=['POST'])
 def get_message():
+    print('entre al webhook')
     return Whatsapp().get_messages()
 
 
