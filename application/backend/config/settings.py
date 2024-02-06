@@ -1,9 +1,3 @@
-token = 'EAARzIZAdyKZB4BO5StEiF57x5RIGPK35CAyoAVlFFt4aRrwUftqcxxRCIM3G7yZBylvcXkxBzvrvPcGv0vRNaoDIcJZBV531LOBLZCHNCWolNiaap8NB8NDRxyUhdfS2bysm2aTJxOpaQbr1yixFbBXt2qUdBDsGZA6CZBIhE0jjPFxGRZCUsea2BTyMX96u0kAV'
-
-whatsapp_token = 'EAARzIZAdyKZB4BO5StEiF57x5RIGPK35CAyoAVlFFt4aRrwUftqcxxRCIM3G7yZBylvcXkxBzvrvPcGv0vRNaoDIcJZBV531LOBLZCHNCWolNiaap8NB8NDRxyUhdfS2bysm2aTJxOpaQbr1yixFbBXt2qUdBDsGZA6CZBIhE0jjPFxGRZCUsea2BTyMX96u0kAV'
-
-whatsapp_url = 'ingresa whatsapp url'
-
 stickers = {
     "poyo_feliz": 984778742532668,
     "perro_traje": 1009219236749949,
@@ -19,5 +13,3 @@ stickers = {
     "gato_triste": 210492141865964,
     "gato_cansado": 1021308728970759
 }
-
-document_url = "https://www.africau.edu/images/default/sample.pdf"

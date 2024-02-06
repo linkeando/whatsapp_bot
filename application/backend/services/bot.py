@@ -1,8 +1,8 @@
+import os
+
 import requests
 import json
 import time
-
-from application.backend.config import settings
 
 
 class Bot:
@@ -76,8 +76,8 @@ class Bot:
     @staticmethod
     def _send_whatsapp_message(data):
         try:
-            whatsapp_token = settings.whatsapp_token
-            whatsapp_url = settings.whatsapp_url
+            whatsapp_token = os.getenv('WHATSAPP_TOKEN')
+            whatsapp_url = os.getenv('WHATSAPP_URL')
             headers = {'Content-Type': 'application/json', 'Authorization': 'Bearer ' + whatsapp_token}
             response = requests.post(whatsapp_url, headers=headers, data=data)
             if response.status_code == 200:

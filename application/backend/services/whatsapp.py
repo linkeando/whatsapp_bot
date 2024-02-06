@@ -1,3 +1,5 @@
+import os
+
 from flask import request
 from application.backend.config import settings
 from application.backend.services.bot import Bot
@@ -26,6 +28,19 @@ class Whatsapp:
             return message['interactive']['button_reply']['title']
         else:
             return 'mensaje no procesado'
+
+    @staticmethod
+    def verify_token():
+        try:
+            token = request.args.get('hub.verify_token')
+            challenge = request.args.get('hub.challenge')
+
+            if token == os.getenv('TOKEN') and challenge is not None:
+                return challenge
+            else:
+                return 'token incorrecto', 403
+        except Exception as e:
+            return e, 403
 
     @classmethod
     def get_messages(cls):

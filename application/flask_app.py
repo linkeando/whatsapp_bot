@@ -1,5 +1,6 @@
 import os
 from flask import Flask
+from dotenv import load_dotenv
 
 
 class FlaskApp:
@@ -12,6 +13,7 @@ class FlaskApp:
         return cls._instance
 
     def _init_app(self):
+        load_dotenv()
         self.app = Flask(__name__)
         self._init_sessions()
 
