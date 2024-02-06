@@ -32,11 +32,14 @@ class Whatsapp:
         try:
             token = request.args.get('hub.verify_token')
             challenge = request.args.get('hub.challenge')
+            print(token)
+            print(challenge)
             if token == settings.token and challenge is not None:
                 return challenge
             else:
                 return 'token incorrecto', 403
         except Exception as e:
+            print('Error al verificar los token')
             return str(e), 403
 
     @classmethod
