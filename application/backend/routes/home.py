@@ -12,12 +12,12 @@ def bienvenido():
 
 @home_bp.route('/webhook', methods=['GET'])
 def verify_token():
-    Whatsapp().verify_token()
+    return Whatsapp().verify_token()
 
 
 @home_bp.route('/webhook', methods=['POST'])
 def get_message():
-    Whatsapp().get_messages()
+    return Whatsapp().get_messages()
 
 
 def init_app(app):
