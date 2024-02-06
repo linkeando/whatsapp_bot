@@ -57,6 +57,8 @@ class Bot:
         )
 
     def manage(self):
+        print('entre aca a manejar')
+        print(self.text.lower())
         text = self.text.lower()
         messages = [self._mark_read()]
 
